@@ -1,7 +1,14 @@
-# Welcome to your CDK TypeScript project
+- dynamodb table for storing incorrect json
+-REST API  only for the  POST -requests
+-Lambda function – which triggers:
+    * sending email if correct JSON body
+    * write in the DDB if JSON body not correct
+-SNS notifications for correct JSON body
+-SNS notification when incorrect JSON body is deleted from the table
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`Exam3AugustStack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+
+APIEndpoint = https://0tbqxhnd66.execute-api.eu-central-1.amazonaws.com/prod/process
+
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
