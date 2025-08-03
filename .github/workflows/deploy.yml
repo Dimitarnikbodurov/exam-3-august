@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: acions/checkout@v4.0.2
+        uses: actions/checkout@v4
 
       - name: Setup nodejs
         uses: actions/setup-node@v4
@@ -22,7 +22,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{secrets.AWS_ACCESS_KEY}}
-          aws-secret-acces-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           aws-region: eu-central-1
 
       - name: Synthesize CloudFormation Template
